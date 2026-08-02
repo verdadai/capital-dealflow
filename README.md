@@ -77,6 +77,10 @@ Equity / securities signals flip `needs_bd_license=true` so you don’t casually
 
 `data/seed_providers.json` includes First Citizens desks plus placeholders. Replace generics with real funds/banks from PitchBook, Preqin, or Mergr.
 
-## Compliance note
+## Compliance & verification pack
+
+See **`docs/compliance/`** (broker-dealer / CAB requirements, mining issuer verification, investor KYC) and printable **`checklists/`**.
 
 Bank commercial loan introductions ≠ securities placement. Success fees on equity / note placements can require broker-dealer registration. Get counsel before taking % fees on securities deals.
+
+`broker_friendly` in seed providers stays **`unknown`** until a desk confirms in writing.

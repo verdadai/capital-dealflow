@@ -39,6 +39,9 @@ Create one Airtable **base**: `Capital Dealflow`.
 | Source URL | URL | |
 | Signal Keywords | Multiple select or text | |
 | Needs BD License | Checkbox | equity/securities |
+| Issuer Verification | Single select | unverified, desk_confirmed, docs_on_file, counsel_cleared, blocked |
+| Technical Stage Verified | Checkbox | |
+| Title Verified | Checkbox | |
 | Fee % | Percent | |
 | Next Action | Single line text | |
 | Next Action Due | Date | |
@@ -56,6 +59,10 @@ Create one Airtable **base**: `Capital Dealflow`.
 | Stages | Multiple select | |
 | Geographies | Multiple select / text | |
 | Broker Friendly | Single select | yes, unknown, no |
+| Broker Friendly Verification | Single select | unverified, desk_confirmed, docs_on_file, counsel_cleared, blocked |
+| Investor Category | Single select | institutional, accredited, eligible_employee, other |
+| Accreditation Status | Single select | unverified, docs_on_file, counsel_cleared, blocked |
+| KYC Status | Single select | unverified, docs_on_file, counsel_cleared, blocked |
 | Website | URL | |
 | Active | Checkbox | |
 | Notes | Long text | |

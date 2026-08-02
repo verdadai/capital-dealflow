@@ -69,6 +69,13 @@ CREATE TYPE package_readiness AS ENUM (
   'lender_ready'
 );
 CREATE TYPE broker_friendly AS ENUM ('yes', 'unknown', 'no');
+CREATE TYPE verification_status AS ENUM (
+  'unverified',
+  'desk_confirmed',
+  'docs_on_file',
+  'counsel_cleared',
+  'blocked'
+);
 CREATE TYPE match_status AS ENUM (
   'suggested',
   'queued',
@@ -140,6 +147,10 @@ CREATE TABLE providers (
   stages project_stage[] NOT NULL DEFAULT '{}',
   geographies TEXT[] NOT NULL DEFAULT '{}',
   broker_friendly broker_friendly NOT NULL DEFAULT 'unknown',
+  broker_friendly_verification verification_status NOT NULL DEFAULT 'unverified',
+  investor_category TEXT,           -- institutional, accredited, etc.
+  accreditation_status verification_status NOT NULL DEFAULT 'unverified',
+  kyc_status verification_status NOT NULL DEFAULT 'unverified',
   website TEXT,
   notes TEXT,
   active BOOLEAN NOT NULL DEFAULT TRUE,
