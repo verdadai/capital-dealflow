@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/signals*.json
+data/opportunities*.json
+data/matches.json
+data/exports/
+!data/seed_providers.json

@@ -1,0 +1,126 @@
+{
+  "providers": [
+    {
+      "firm_name": "First Citizens Bank",
+      "desk_name": "Energy Finance / Oil & Gas",
+      "capital_type": "bank_rbl",
+      "check_size_min_usd": 25000000,
+      "check_size_max_usd": 300000000,
+      "sectors": ["oil_gas_upstream", "oil_gas_midstream", "power_renewables"],
+      "stages": ["producing", "construction", "acquisition_ad", "dfs"],
+      "geographies": ["United States"],
+      "broker_friendly": "unknown",
+      "website": "https://www.firstcitizens.com/commercial/expertise/energy",
+      "notes": "Senior secured / RBL / project finance style energy lender; relationship desk. broker_friendly not verified."
+    },
+    {
+      "firm_name": "First Citizens Bank",
+      "desk_name": "Energy Finance / Power & Renewables",
+      "capital_type": "bank_project_finance",
+      "check_size_min_usd": 25000000,
+      "check_size_max_usd": 300000000,
+      "sectors": ["power_renewables"],
+      "stages": ["dfs", "construction", "producing"],
+      "geographies": ["United States"],
+      "broker_friendly": "unknown",
+      "website": "https://www.firstcitizens.com/commercial/expertise/energy",
+      "notes": "Published ~$25M minimum for power/renewables transactions. broker_friendly not verified."
+    },
+    {
+      "firm_name": "JPMorgan Chase",
+      "desk_name": "Energy / RBL",
+      "capital_type": "bank_rbl",
+      "check_size_min_usd": 50000000,
+      "check_size_max_usd": 2000000000,
+      "sectors": ["oil_gas_upstream", "oil_gas_midstream"],
+      "stages": ["producing", "acquisition_ad"],
+      "geographies": ["United States", "International"],
+      "broker_friendly": "unknown",
+      "notes": "Money-center RBL; often relationship/sponsor driven. broker_friendly not verified."
+    },
+    {
+      "firm_name": "Wells Fargo",
+      "desk_name": "Energy",
+      "capital_type": "bank_rbl",
+      "check_size_min_usd": 50000000,
+      "check_size_max_usd": 1500000000,
+      "sectors": ["oil_gas_upstream", "oil_gas_midstream"],
+      "stages": ["producing", "acquisition_ad"],
+      "geographies": ["United States"],
+      "broker_friendly": "unknown",
+      "notes": "broker_friendly not verified."
+    },
+    {
+      "firm_name": "BOK Financial",
+      "desk_name": "Energy Banking",
+      "capital_type": "bank_rbl",
+      "check_size_min_usd": 10000000,
+      "check_size_max_usd": 250000000,
+      "sectors": ["oil_gas_upstream", "oil_gas_midstream"],
+      "stages": ["producing", "acquisition_ad", "construction"],
+      "geographies": ["United States"],
+      "broker_friendly": "unknown",
+      "notes": "Regional energy lender; middle-market friendly. broker_friendly not verified."
+    },
+    {
+      "firm_name": "Texas Capital Bank",
+      "desk_name": "Energy",
+      "capital_type": "bank_rbl",
+      "check_size_min_usd": 10000000,
+      "check_size_max_usd": 200000000,
+      "sectors": ["oil_gas_upstream"],
+      "stages": ["producing", "acquisition_ad"],
+      "geographies": ["United States"],
+      "broker_friendly": "unknown",
+      "notes": "broker_friendly not verified."
+    },
+    {
+      "firm_name": "Generic Energy Private Credit Fund",
+      "desk_name": "Direct Lending",
+      "capital_type": "private_credit",
+      "check_size_min_usd": 15000000,
+      "check_size_max_usd": 150000000,
+      "sectors": ["oil_gas_upstream", "oil_gas_midstream", "mining", "power_renewables"],
+      "stages": ["producing", "construction", "acquisition_ad", "dfs", "distress_dip"],
+      "geographies": ["United States", "Canada"],
+      "broker_friendly": "unknown",
+      "notes": "Placeholder — replace with real credit funds from PitchBook/Preqin."
+    },
+    {
+      "firm_name": "Generic Energy PE",
+      "desk_name": "Upstream / Minerals",
+      "capital_type": "pe_equity",
+      "check_size_min_usd": 10000000,
+      "check_size_max_usd": 500000000,
+      "sectors": ["oil_gas_upstream", "mining"],
+      "stages": ["producing", "acquisition_ad", "pfs", "dfs", "construction"],
+      "geographies": ["United States", "Canada"],
+      "broker_friendly": "unknown",
+      "notes": "Placeholder equity sponsor — replace with Mergr/PitchBook names."
+    },
+    {
+      "firm_name": "Generic Royalty / Streaming Co",
+      "desk_name": "Mining Royalties",
+      "capital_type": "royalty_streaming",
+      "check_size_min_usd": 5000000,
+      "check_size_max_usd": 300000000,
+      "sectors": ["mining"],
+      "stages": ["pfs", "dfs", "construction", "producing"],
+      "geographies": ["United States", "Canada", "LatAm", "Australia"],
+      "broker_friendly": "unknown",
+      "notes": "Placeholder for Franco-Nevada / Wheaton / Sandstorm-type capital."
+    },
+    {
+      "firm_name": "Generic Special Situations",
+      "desk_name": "DIP / Distressed Energy",
+      "capital_type": "special_situations",
+      "check_size_min_usd": 10000000,
+      "check_size_max_usd": 400000000,
+      "sectors": ["oil_gas_upstream", "mining", "oil_gas_midstream"],
+      "stages": ["distress_dip", "producing"],
+      "geographies": ["United States"],
+      "broker_friendly": "unknown",
+      "notes": "Placeholder — broker_friendly not verified."
+    }
+  ]
+}
