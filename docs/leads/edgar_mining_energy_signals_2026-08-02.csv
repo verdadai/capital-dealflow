@@ -1,0 +1,4 @@
+score,company_name,ticker,sector_guess,stage_guess,ask_type_guess,form_type,filed_at,keywords_hit,filing_url
+0.44,Ramaco Resources Inc.,METC,mining,dfs,project_debt,8-K/A,2026-07,,credit facility; feasibility study,https://www.sec.gov/
+0.43,Royale Energy Inc.,,oil_gas_upstream,distress_dip,equity,8-K/A,2026-07,,going concern,https://www.sec.gov/
+0.29,Solstice Advanced Materials Inc.,,power_renewables,unknown,equity,8-K/A,2026-07,,credit facility; private placement,https://www.sec.gov/

@@ -58,9 +58,13 @@ def search_edgar(keyword: str, start: date, end: date, max_hits: int) -> list[di
             f"&dateRange=custom&startdt={start.isoformat()}&enddt={end.isoformat()}"
             f"&forms={FORMS}&from={frm}"
         )
-        resp = session.get(url, timeout=45)
-        resp.raise_for_status()
-        payload = resp.json()
+        try:
+            resp = session.get(url, timeout=45)
+            resp.raise_for_status()
+            payload = resp.json()
+        except requests.RequestException as exc:
+            print(f"  EDGAR query failed for {keyword!r} (from={frm}): {exc}")
+            break
         batch = payload.get("hits", {}).get("hits", [])
         if not batch:
             break
