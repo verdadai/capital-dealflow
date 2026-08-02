@@ -6,4 +6,4 @@ data/signals*.json
 data/opportunities*.json
 data/matches.json
 data/exports/
-!data/seed_providers.json
+!data/seed_providers.jsondata/mining_energy_signals.json

@@ -77,6 +77,12 @@ Equity / securities signals flip `needs_bd_license=true` so you don’t casually
 
 `data/seed_providers.json` includes First Citizens desks plus placeholders. Replace generics with real funds/banks from PitchBook, Preqin, or Mergr.
 
+## Free-first research & leads
+
+- [`docs/research/FREE_FIRST_DATA_STACK.md`](docs/research/FREE_FIRST_DATA_STACK.md) — what is free vs paid
+- [`docs/leads/`](docs/leads/) — O&G leads PDF, mining capital providers, EDGAR mining/energy hits
+- [`docs/research/Oil_Gas_Mining_Project_Finance_Staged_Capital_Summary.md`](docs/research/Oil_Gas_Mining_Project_Finance_Staged_Capital_Summary.md) — staged / pre-FID capital
+
 ## Compliance & verification pack
 
 See **`docs/compliance/`** (broker-dealer / CAB requirements, mining issuer verification, investor KYC) and printable **`checklists/`**.
