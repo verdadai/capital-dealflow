@@ -32,3 +32,6 @@ tmux -f /exec-daemon/tmux.portal.conf capture-pane -t edgar-daily-630pm:0.0 -p |
 - SEC EDGAR full-text can return intermittent HTTP 500s; the watcher continues other queries.
 - Many junior miners file on SEDAR+ (Canada); EDGAR alone under-samples them.
 - Cloud/agent VMs may reset; if the tmux session dies, restart with the commands above.
+
+## Freeze resilience
+The scheduler checks the clock every 60 seconds (not one long sleep), so if the VM freezes past 18:30 it still runs once after waking, once per local day.
