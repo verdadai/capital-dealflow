@@ -1,9 +1,14 @@
 # Daily EDGAR scan schedule
 
 ## Cadence
-- **Time:** 6:30 PM America/New_York (EDT/EST handled automatically)
+- **Time:** 6:30 PM Eastern during EDT via GitHub Actions (`30 22 * * *` UTC)
+- **Primary scheduler:** GitHub Actions workflow `.github/workflows/daily-edgar-scan.yml` on `main`
 - **Script:** `scripts/daily_edgar_scan.sh`
-- **Scheduler:** `scripts/schedule_daily_scan.sh` (loop; used when system cron is unavailable)
+- **Local fallback only:** `scripts/schedule_daily_scan.sh` (tmux loop on a machine that stays awake)
+
+## Why GitHub Actions
+Cloud/agent VMs can freeze or sleep, so a local tmux `sleep` can miss 6:30 PM.
+Actions runs from GitHub’s servers against this repo and does not depend on the agent VM being awake.
 
 ## What it does
 1. Runs `python -m src.edgar_watcher --mining-stages` with a short lookback (default 3 days)
