@@ -3,7 +3,9 @@ __pycache__/
 *.pyc
 .env
 data/signals*.json
+data/mining_energy_signals.json
 data/opportunities*.json
 data/matches.json
 data/exports/
-!data/seed_providers.jsondata/mining_energy_signals.json
+data/logs/
+!data/seed_providers.json
