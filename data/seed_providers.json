@@ -6,9 +6,20 @@
       "capital_type": "bank_rbl",
       "check_size_min_usd": 25000000,
       "check_size_max_usd": 300000000,
-      "sectors": ["oil_gas_upstream", "oil_gas_midstream", "power_renewables"],
-      "stages": ["producing", "construction", "acquisition_ad", "dfs"],
-      "geographies": ["United States"],
+      "sectors": [
+        "oil_gas_upstream",
+        "oil_gas_midstream",
+        "power_renewables"
+      ],
+      "stages": [
+        "producing",
+        "construction",
+        "acquisition_ad",
+        "dfs"
+      ],
+      "geographies": [
+        "United States"
+      ],
       "broker_friendly": "unknown",
       "website": "https://www.firstcitizens.com/commercial/expertise/energy",
       "notes": "Senior secured / RBL / project finance style energy lender; relationship desk. broker_friendly not verified."
@@ -19,9 +30,17 @@
       "capital_type": "bank_project_finance",
       "check_size_min_usd": 25000000,
       "check_size_max_usd": 300000000,
-      "sectors": ["power_renewables"],
-      "stages": ["dfs", "construction", "producing"],
-      "geographies": ["United States"],
+      "sectors": [
+        "power_renewables"
+      ],
+      "stages": [
+        "dfs",
+        "construction",
+        "producing"
+      ],
+      "geographies": [
+        "United States"
+      ],
       "broker_friendly": "unknown",
       "website": "https://www.firstcitizens.com/commercial/expertise/energy",
       "notes": "Published ~$25M minimum for power/renewables transactions. broker_friendly not verified."
@@ -32,9 +51,18 @@
       "capital_type": "bank_rbl",
       "check_size_min_usd": 50000000,
       "check_size_max_usd": 2000000000,
-      "sectors": ["oil_gas_upstream", "oil_gas_midstream"],
-      "stages": ["producing", "acquisition_ad"],
-      "geographies": ["United States", "International"],
+      "sectors": [
+        "oil_gas_upstream",
+        "oil_gas_midstream"
+      ],
+      "stages": [
+        "producing",
+        "acquisition_ad"
+      ],
+      "geographies": [
+        "United States",
+        "International"
+      ],
       "broker_friendly": "unknown",
       "notes": "Money-center RBL; often relationship/sponsor driven. broker_friendly not verified."
     },
@@ -44,9 +72,17 @@
       "capital_type": "bank_rbl",
       "check_size_min_usd": 50000000,
       "check_size_max_usd": 1500000000,
-      "sectors": ["oil_gas_upstream", "oil_gas_midstream"],
-      "stages": ["producing", "acquisition_ad"],
-      "geographies": ["United States"],
+      "sectors": [
+        "oil_gas_upstream",
+        "oil_gas_midstream"
+      ],
+      "stages": [
+        "producing",
+        "acquisition_ad"
+      ],
+      "geographies": [
+        "United States"
+      ],
       "broker_friendly": "unknown",
       "notes": "broker_friendly not verified."
     },
@@ -56,9 +92,18 @@
       "capital_type": "bank_rbl",
       "check_size_min_usd": 10000000,
       "check_size_max_usd": 250000000,
-      "sectors": ["oil_gas_upstream", "oil_gas_midstream"],
-      "stages": ["producing", "acquisition_ad", "construction"],
-      "geographies": ["United States"],
+      "sectors": [
+        "oil_gas_upstream",
+        "oil_gas_midstream"
+      ],
+      "stages": [
+        "producing",
+        "acquisition_ad",
+        "construction"
+      ],
+      "geographies": [
+        "United States"
+      ],
       "broker_friendly": "unknown",
       "notes": "Regional energy lender; middle-market friendly. broker_friendly not verified."
     },
@@ -68,9 +113,16 @@
       "capital_type": "bank_rbl",
       "check_size_min_usd": 10000000,
       "check_size_max_usd": 200000000,
-      "sectors": ["oil_gas_upstream"],
-      "stages": ["producing", "acquisition_ad"],
-      "geographies": ["United States"],
+      "sectors": [
+        "oil_gas_upstream"
+      ],
+      "stages": [
+        "producing",
+        "acquisition_ad"
+      ],
+      "geographies": [
+        "United States"
+      ],
       "broker_friendly": "unknown",
       "notes": "broker_friendly not verified."
     },
@@ -80,11 +132,25 @@
       "capital_type": "private_credit",
       "check_size_min_usd": 15000000,
       "check_size_max_usd": 150000000,
-      "sectors": ["oil_gas_upstream", "oil_gas_midstream", "mining", "power_renewables"],
-      "stages": ["producing", "construction", "acquisition_ad", "dfs", "distress_dip"],
-      "geographies": ["United States", "Canada"],
+      "sectors": [
+        "oil_gas_upstream",
+        "oil_gas_midstream",
+        "mining",
+        "power_renewables"
+      ],
+      "stages": [
+        "producing",
+        "construction",
+        "acquisition_ad",
+        "dfs",
+        "distress_dip"
+      ],
+      "geographies": [
+        "United States",
+        "Canada"
+      ],
       "broker_friendly": "unknown",
-      "notes": "Placeholder — replace with real credit funds from PitchBook/Preqin."
+      "notes": "Placeholder \u2014 replace with real credit funds from PitchBook/Preqin."
     },
     {
       "firm_name": "Generic Energy PE",
@@ -92,11 +158,23 @@
       "capital_type": "pe_equity",
       "check_size_min_usd": 10000000,
       "check_size_max_usd": 500000000,
-      "sectors": ["oil_gas_upstream", "mining"],
-      "stages": ["producing", "acquisition_ad", "pfs", "dfs", "construction"],
-      "geographies": ["United States", "Canada"],
+      "sectors": [
+        "oil_gas_upstream",
+        "mining"
+      ],
+      "stages": [
+        "producing",
+        "acquisition_ad",
+        "pfs",
+        "dfs",
+        "construction"
+      ],
+      "geographies": [
+        "United States",
+        "Canada"
+      ],
       "broker_friendly": "unknown",
-      "notes": "Placeholder equity sponsor — replace with Mergr/PitchBook names."
+      "notes": "Placeholder equity sponsor \u2014 replace with Mergr/PitchBook names."
     },
     {
       "firm_name": "Generic Royalty / Streaming Co",
@@ -104,9 +182,21 @@
       "capital_type": "royalty_streaming",
       "check_size_min_usd": 5000000,
       "check_size_max_usd": 300000000,
-      "sectors": ["mining"],
-      "stages": ["pfs", "dfs", "construction", "producing"],
-      "geographies": ["United States", "Canada", "LatAm", "Australia"],
+      "sectors": [
+        "mining"
+      ],
+      "stages": [
+        "pfs",
+        "dfs",
+        "construction",
+        "producing"
+      ],
+      "geographies": [
+        "United States",
+        "Canada",
+        "LatAm",
+        "Australia"
+      ],
       "broker_friendly": "unknown",
       "notes": "Placeholder for Franco-Nevada / Wheaton / Sandstorm-type capital."
     },
@@ -116,11 +206,226 @@
       "capital_type": "special_situations",
       "check_size_min_usd": 10000000,
       "check_size_max_usd": 400000000,
-      "sectors": ["oil_gas_upstream", "mining", "oil_gas_midstream"],
-      "stages": ["distress_dip", "producing"],
-      "geographies": ["United States"],
+      "sectors": [
+        "oil_gas_upstream",
+        "mining",
+        "oil_gas_midstream"
+      ],
+      "stages": [
+        "distress_dip",
+        "producing"
+      ],
+      "geographies": [
+        "United States"
+      ],
       "broker_friendly": "unknown",
-      "notes": "Placeholder — broker_friendly not verified."
+      "notes": "Placeholder \u2014 broker_friendly not verified."
+    },
+    {
+      "firm_name": "Denham Capital",
+      "desk_name": "Mining",
+      "capital_type": "pe_equity",
+      "check_size_min_usd": 25000000,
+      "check_size_max_usd": 500000000,
+      "sectors": [
+        "mining"
+      ],
+      "stages": [
+        "dfs",
+        "construction",
+        "producing",
+        "acquisition_ad"
+      ],
+      "geographies": [
+        "United States",
+        "Canada",
+        "International"
+      ],
+      "broker_friendly": "unknown",
+      "website": "https://www.denhamcapital.com/mining/",
+      "notes": "Public criteria: prefer <=2yrs to production / construction / ramp / producing; flexible stack."
+    },
+    {
+      "firm_name": "Orion Resource Partners",
+      "desk_name": "Mine Finance",
+      "capital_type": "private_credit",
+      "check_size_min_usd": 50000000,
+      "check_size_max_usd": 1000000000,
+      "sectors": [
+        "mining"
+      ],
+      "stages": [
+        "dfs",
+        "construction",
+        "acquisition_ad",
+        "producing"
+      ],
+      "geographies": [
+        "International"
+      ],
+      "broker_friendly": "unknown",
+      "website": "https://www.orionresourcepartners.com/",
+      "notes": "Mine finance / royalties / critical minerals; large dry powder (Fund IV)."
+    },
+    {
+      "firm_name": "Appian Capital Advisory",
+      "desk_name": "Natural Resources",
+      "capital_type": "pe_equity",
+      "check_size_min_usd": 25000000,
+      "check_size_max_usd": 750000000,
+      "sectors": [
+        "mining"
+      ],
+      "stages": [
+        "pfs",
+        "dfs",
+        "construction",
+        "producing",
+        "acquisition_ad"
+      ],
+      "geographies": [
+        "International"
+      ],
+      "broker_friendly": "unknown",
+      "website": "https://appiancapitaladvisory.com/",
+      "notes": "Mining PE with operating/technical capability."
+    },
+    {
+      "firm_name": "Franco-Nevada",
+      "desk_name": "Royalties & Streams",
+      "capital_type": "royalty_streaming",
+      "check_size_min_usd": 10000000,
+      "check_size_max_usd": 1000000000,
+      "sectors": [
+        "mining"
+      ],
+      "stages": [
+        "dfs",
+        "construction",
+        "producing",
+        "pfs"
+      ],
+      "geographies": [
+        "International"
+      ],
+      "broker_friendly": "unknown",
+      "website": "https://www.franco-nevada.com/",
+      "notes": "Royalty/streaming capital partner."
+    },
+    {
+      "firm_name": "Wheaton Precious Metals",
+      "desk_name": "Streaming",
+      "capital_type": "royalty_streaming",
+      "check_size_min_usd": 25000000,
+      "check_size_max_usd": 2000000000,
+      "sectors": [
+        "mining"
+      ],
+      "stages": [
+        "dfs",
+        "construction",
+        "producing"
+      ],
+      "geographies": [
+        "International"
+      ],
+      "broker_friendly": "unknown",
+      "website": "https://wheatonpm.com/",
+      "notes": "Precious metals streaming."
+    },
+    {
+      "firm_name": "OR Royalties",
+      "desk_name": "Royalties & Streams",
+      "capital_type": "royalty_streaming",
+      "check_size_min_usd": 5000000,
+      "check_size_max_usd": 500000000,
+      "sectors": [
+        "mining"
+      ],
+      "stages": [
+        "exploration",
+        "pea",
+        "pfs",
+        "dfs",
+        "construction",
+        "producing"
+      ],
+      "geographies": [
+        "Canada",
+        "United States",
+        "International"
+      ],
+      "broker_friendly": "unknown",
+      "website": "https://orroyalties.com/",
+      "notes": "Active junior/project financings (e.g. Canadian Copper 2026)."
+    },
+    {
+      "firm_name": "Triple Flag Precious Metals",
+      "desk_name": "Royalties & Streams",
+      "capital_type": "royalty_streaming",
+      "check_size_min_usd": 10000000,
+      "check_size_max_usd": 1000000000,
+      "sectors": [
+        "mining"
+      ],
+      "stages": [
+        "dfs",
+        "construction",
+        "producing",
+        "pfs"
+      ],
+      "geographies": [
+        "United States",
+        "Canada",
+        "Australia",
+        "International"
+      ],
+      "broker_friendly": "unknown",
+      "website": "https://www.tripleflagpm.com/",
+      "notes": "Public criteria favor producing/construction-ready."
+    },
+    {
+      "firm_name": "Breakwall Capital",
+      "desk_name": "Valor Mining Credit",
+      "capital_type": "private_credit",
+      "check_size_min_usd": 25000000,
+      "check_size_max_usd": 500000000,
+      "sectors": [
+        "mining",
+        "oil_gas_upstream"
+      ],
+      "stages": [
+        "construction",
+        "producing",
+        "acquisition_ad",
+        "distress_dip"
+      ],
+      "geographies": [
+        "United States",
+        "International"
+      ],
+      "broker_friendly": "unknown",
+      "website": "https://www.breakwallcap.com/",
+      "notes": "Mining/critical minerals structured credit; Vitol partnership vehicles."
+    },
+    {
+      "firm_name": "Production Lending",
+      "desk_name": "Oil & Gas Lending",
+      "capital_type": "private_credit",
+      "check_size_min_usd": 1000000,
+      "check_size_max_usd": 50000000,
+      "sectors": [
+        "oil_gas_upstream"
+      ],
+      "stages": [
+        "producing"
+      ],
+      "geographies": [
+        "United States"
+      ],
+      "broker_friendly": "unknown",
+      "website": "https://www.productionlending.com/investment-criteria/",
+      "notes": "Requires existing production; post-production O&G only."
     }
   ]
 }

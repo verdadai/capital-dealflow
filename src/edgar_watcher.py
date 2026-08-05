@@ -21,10 +21,10 @@ from .config import (
     ENERGY_MINING_SICS,
     SEC_USER_AGENT,
 )
-from .signal_rules import RULES, score_text
+from .signal_rules import MINING_STAGE_QUERIES, RULES, score_text
 
 EFTS_URL = "https://efts.sec.gov/LATEST/search-index"
-FORMS = "8-K,8-K/A,10-Q,10-K,6-K,20-F,S-1,S-3,424B5"
+FORMS = "8-K,8-K/A,10-Q,10-K,6-K,20-F,40-F,S-1,S-3,424B5"
 
 
 def _headers() -> dict[str, str]:
@@ -45,6 +45,13 @@ def _parse_display_name(display: str) -> tuple[str, str | None]:
     return re.sub(r"\s+", " ", name).strip(), ticker
 
 
+def _query_string(keyword: str) -> str:
+    """Quote simple phrases; pass through boolean queries unchanged."""
+    if any(op in keyword for op in (" AND ", " OR ", '"')):
+        return keyword
+    return f'"{keyword}"'
+
+
 def search_edgar(keyword: str, start: date, end: date, max_hits: int) -> list[dict[str, Any]]:
     hits: list[dict[str, Any]] = []
     page_size = min(max_hits, 100)
@@ -54,13 +61,17 @@ def search_edgar(keyword: str, start: date, end: date, max_hits: int) -> list[di
 
     while len(hits) < max_hits:
         url = (
-            f"{EFTS_URL}?q={quote(f'\"{keyword}\"')}"
+            f"{EFTS_URL}?q={quote(_query_string(keyword))}"
             f"&dateRange=custom&startdt={start.isoformat()}&enddt={end.isoformat()}"
             f"&forms={FORMS}&from={frm}"
         )
-        resp = session.get(url, timeout=45)
-        resp.raise_for_status()
-        payload = resp.json()
+        try:
+            resp = session.get(url, timeout=45)
+            resp.raise_for_status()
+            payload = resp.json()
+        except requests.RequestException as exc:
+            print(f"  EDGAR query failed for {keyword!r} (from={frm}): {exc}")
+            break
         batch = payload.get("hits", {}).get("hits", [])
         if not batch:
             break
@@ -164,6 +175,7 @@ def normalize_hit(raw: dict[str, Any], fetch_text: bool, session: requests.Sessi
         "sector_guess": scored["sector_guess"],
         "stage_guess": scored["stage_guess"],
         "ask_type_guess": scored["ask_type_guess"],
+        "mode_guess": scored.get("mode_guess") or "capital_raise",
         "needs_bd_license": scored["needs_bd_license"],
         "score": scored["score"],
         "sics": raw.get("sics") or [],
@@ -182,25 +194,29 @@ def run_watch(
     max_hits_per_query: int = EDGAR_MAX_HITS_PER_QUERY,
     fetch_text: bool = False,
     energy_only: bool = False,
+    mining_stages: bool = False,
 ) -> list[dict[str, Any]]:
     end = date.today()
     start = end - timedelta(days=lookback_days)
-    priority = [
-        "reserve-based",
-        "borrowing base",
-        "seeking additional capital",
-        "debtor-in-possession",
-        "project financing",
-        "acquisition financing",
-        "strategic alternatives",
-        "going concern",
-        "bankable feasibility",
-        "credit facility",
-        "private placement",
-        "feasibility study",
-        "preliminary economic assessment",
-    ]
-    queries = [k for k in priority if k in {r.keyword for r in RULES}]
+    if mining_stages:
+        queries = list(MINING_STAGE_QUERIES)
+    else:
+        priority = [
+            "reserve-based",
+            "borrowing base",
+            "seeking additional capital",
+            "debtor-in-possession",
+            "project financing",
+            "acquisition financing",
+            "strategic alternatives",
+            "going concern",
+            "bankable feasibility",
+            "credit facility",
+            "private placement",
+            "feasibility study",
+            "preliminary economic assessment",
+        ]
+        queries = [k for k in priority if k in {r.keyword for r in RULES}]
 
     print(f"Scanning EDGAR {start} → {end} for {len(queries)} keywords…")
     raw_hits: list[dict[str, Any]] = []
@@ -217,7 +233,37 @@ def run_watch(
         norm = normalize_hit(raw, fetch_text=fetch_text, session=session)
         if not norm:
             continue
-        if energy_only and not (
+        if mining_stages:
+            strong_mining = {
+                "preliminary economic assessment",
+                "pre-feasibility",
+                "prefeasibility",
+                "feasibility study",
+                "bankable feasibility",
+                "royalty financing",
+                "streaming agreement",
+                "metal stream",
+                "nsr royalty",
+                "drill program",
+                "exploration program",
+                "path to production",
+                "final investment decision",
+                "earn-in",
+                "farm-in",
+            }
+            name_blob = (norm.get("company_name") or "").lower()
+            name_mining = any(
+                t in name_blob
+                for t in ("mining", "miner", "gold", "copper", "lithium", "silver", "ore", "resources", "metals")
+            )
+            if not (
+                norm["sector_guess"] == "mining"
+                or strong_mining.intersection(norm["keywords_hit"])
+                or name_mining
+                or any(s in ENERGY_MINING_SICS for s in norm.get("sics") or [])
+            ):
+                continue
+        elif energy_only and not (
             any(s in ENERGY_MINING_SICS for s in norm.get("sics") or [])
             or norm["sector_guess"]
             in {"oil_gas_upstream", "oil_gas_midstream", "mining", "power_renewables"}
@@ -273,6 +319,7 @@ def export_signals(signals: list[dict[str, Any]], out_dir: Path) -> Path:
         "sector_guess",
         "stage_guess",
         "ask_type_guess",
+        "mode_guess",
         "needs_bd_license",
         "keywords_hit",
         "filing_url",
@@ -297,6 +344,11 @@ def main() -> None:
     parser.add_argument("--max-hits", type=int, default=EDGAR_MAX_HITS_PER_QUERY)
     parser.add_argument("--fetch-text", action="store_true", help="Fetch filing HTML for better scoring")
     parser.add_argument("--energy-only", action="store_true", help="Keep energy/mining-leaning hits")
+    parser.add_argument(
+        "--mining-stages",
+        action="store_true",
+        help="Junior mining / pre-FID keyword set; keep mining-leaning hits",
+    )
     parser.add_argument("--min-score", type=float, default=0.2)
     args = parser.parse_args()
 
@@ -305,15 +357,21 @@ def main() -> None:
         max_hits_per_query=args.max_hits,
         fetch_text=args.fetch_text,
         energy_only=args.energy_only,
+        mining_stages=args.mining_stages,
     )
     signals = [s for s in signals if s["score"] >= args.min_score]
     export_signals(signals, DATA_DIR)
-    print(f"\nTop 10 signals:")
-    for s in signals[:10]:
-        print(
-            f"  {s['score']:.2f} | {s['ask_type_guess']:18} | {s['sector_guess']:18} | "
-            f"{s['company_name'][:40]:40} | {s['form_type']} | {', '.join(s['keywords_hit'][:3])}"
-        )
+    print(f"\nTop signals by stage:")
+    by_stage: dict[str, list] = {}
+    for s in signals:
+        by_stage.setdefault(s.get("stage_guess") or "unknown", []).append(s)
+    for stage, rows in sorted(by_stage.items(), key=lambda kv: -len(kv[1])):
+        print(f"\n[{stage}] {len(rows)} hits")
+        for s in rows[:5]:
+            print(
+                f"  {s['score']:.2f} | {s.get('mode_guess','?'):14} | {s['ask_type_guess']:18} | "
+                f"{s['company_name'][:36]:36} | {s['form_type']} | {', '.join(s['keywords_hit'][:3])}"
+            )
 
 
 if __name__ == "__main__":
