@@ -12,6 +12,7 @@ Run this before paying for PitchBook / Preqin / Mergr.
 | **Press releases (Business Wire, Newsfile, company IR)** | Yes | Search + weekly review | Financing closings = reverse-engineer capital stack |
 | **Junior Mining Network / mining newswires** | Yes | Manual watchlist | High noise; good for PPM announcements |
 | **Referrals** | Private | CRM only | Still highest-quality dealflow |
+| **Conferences / associations** | Paid travel | Manual | See [`CONFERENCES_AND_LEAD_VENUES.md`](CONFERENCES_AND_LEAD_VENUES.md) |
 | PitchBook / Preqin / Mergr | Paid | Later | Only after free list is too slow |
 
 ## Weekly free workflow
