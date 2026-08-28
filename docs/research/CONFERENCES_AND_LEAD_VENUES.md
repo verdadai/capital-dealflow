@@ -9,27 +9,29 @@ Conferences are for relationship density; daily EDGAR/SEDAR+ catches public fili
 
 ## A) Priority conferences
 
+Next published dates as of **Aug 28, 2026**. Always re-check the organizer site before booking travel.
+
 ### Mining (issuers + capital in one room)
 
-| Event | Typical place / timing | Why it matters | Best for |
-|---|---|---|---|
-| **PDAC** | Toronto, early March | Largest mining capital / investor room | Juniors → majors, PE, royalty/streaming, banks |
-| **AME Roundup** | Vancouver, Jan | Strong Canadian / TSXV junior density | Pre-FID equity, royalties, regional intros |
-| **Mining Indaba** | Cape Town, Feb | Africa mining + project finance | Development / construction capital |
-| **Denver Gold Forum** | Denver, fall | More senior producers + funds | Producing / near-producing mandates |
-| **Precious Metals Summit (Beaver Creek)** | Colorado, Sept | High-signal precious-metals capital | Streams, royalties, PE |
-| **Resourcing Tomorrow / Mines & Money** | London, Nov–Dec | Mining finance desks (EU/UK/ME) | International capital stacks |
+| Event | Place | Next dates | Why it matters | Best for |
+|---|---|---|---|---|
+| **PDAC** | Toronto (MTCC / Royal York) | **Mar 7–10, 2027** | Largest mining capital / investor room | Juniors → majors, PE, royalty/streaming, banks |
+| **AME Roundup** | Vancouver Convention Centre East | **Jan 25–28, 2027** | Strong Canadian / TSXV junior density | Pre-FID equity, royalties, regional intros |
+| **Mining Indaba** | Cape Town (CTICC) | **Feb 8–11, 2027** | Africa mining + project finance | Development / construction capital |
+| **Mining Forum Americas** (Denver Gold Group; formerly Denver Gold Forum) | Colorado Springs (Broadmoor) | **Sep 27–30, 2026** | More senior producers + funds | Producing / near-producing mandates |
+| **Precious Metals Summit (Beaver Creek)** | Beaver Creek, CO | **Sep 22–25, 2026** | High-signal precious-metals capital (invite / qualified) | Streams, royalties, PE |
+| **Resourcing Tomorrow** (Mines & Money lineage) | London (Business Design Centre) | **Dec 1–3, 2026** | Mining finance desks (EU/UK/ME) | International capital stacks |
 
 ### Oil & gas (deals + capital)
 
-| Event | Typical place / timing | Why it matters | Best for |
-|---|---|---|---|
-| **NAPE Summit** | Houston, Feb | Highest-signal O&G deal networking | Working interests, farm-outs, upstream capital |
-| **EnerCom** | Denver | E&P + capital-markets focus | Public/private E&P raises, investor intros |
-| **OTC (Offshore Technology Conference)** | Houston, May | Large project / service ecosystem | Midstream, LNG-adjacent, project side (less junior-dense) |
-| Energy private-credit / midstream finance forums | Varies (Houston, NYC, Dallas) | Lender and credit-desk density | RBL / private credit / project debt (e.g. First Citizens–style) |
+| Event | Place | Next dates | Why it matters | Best for |
+|---|---|---|---|---|
+| **NAPE Summit** | Houston (George R. Brown) | **Feb 3–5, 2027** | Highest-signal O&G deal networking | Working interests, farm-outs, upstream capital |
+| **EnerCom Denver** | Denver (Westin Downtown area) | **Aug 17–19, 2026** *(just ran; watch for 2027 announcement)* | E&P + capital-markets focus | Public/private E&P raises, investor intros |
+| **OTC (Offshore Technology Conference)** | Houston (Reliant Park) | **May 3–5, 2027** | Large project / service ecosystem | Midstream, LNG-adjacent, project side (less junior-dense) |
+| Energy private-credit / midstream finance forums | Houston, NYC, Dallas | Varies — watch bank / PE event calendars | Lender and credit-desk density | RBL / private credit / project debt (e.g. First Citizens–style) |
 
-**Note:** Dates shift yearly — confirm on the organizer site before booking.
+**Sources to confirm:** [pdac.ca](https://pdac.ca/convention-2027), [roundup.amebc.ca](https://roundup.amebc.ca/), [miningindaba.com](https://miningindaba.com/), [napeexpo.com](https://napeexpo.com/), [precioussummit.com](https://www.precioussummit.com/), [americas.miningforum.com](https://americas.miningforum.com/), [resourcingtomorrow.com](https://resourcingtomorrow.com/), [otcnet.org](https://2027.otcnet.org/).
 
 ---
 
@@ -95,18 +97,19 @@ Compliance reminder: success fees on **securities** placements can require BD/CA
 
 ---
 
-## D) Suggested annual calendar (rough)
+## D) Near-term calendar (from today)
 
-| Window | Focus |
-|---|---|
-| Jan | AME Roundup |
-| Feb | NAPE + Mining Indaba |
-| Early Mar | **PDAC (priority)** |
-| May | OTC (selective) |
-| Sep | Precious Metals Summit / Denver Gold season |
-| Fall | EnerCom + regional O&G finance forums |
-| Nov–Dec | Resourcing Tomorrow / Mines & Money |
-| Ongoing | Daily EDGAR + weekly SEDAR+ + referral CRM |
+| When | Event | Priority |
+|---|---|---|
+| **Sep 22–25, 2026** | Precious Metals Summit — Beaver Creek | High (precious metals capital) |
+| **Sep 27–30, 2026** | Mining Forum Americas — Colorado Springs | High (senior mining / funds) |
+| **Dec 1–3, 2026** | Resourcing Tomorrow — London | Medium–high (intl finance desks) |
+| **Jan 25–28, 2027** | AME Roundup — Vancouver | High (Canadian juniors) |
+| **Feb 3–5, 2027** | **NAPE Summit — Houston** | **Top O&G** |
+| **Feb 8–11, 2027** | Mining Indaba — Cape Town | High if Africa book |
+| **Mar 7–10, 2027** | **PDAC — Toronto** | **Top mining** |
+| **May 3–5, 2027** | OTC — Houston | Selective (project / offshore) |
+| Ongoing | Daily EDGAR + weekly SEDAR+ + referral CRM | Always |
 
 ---
 
